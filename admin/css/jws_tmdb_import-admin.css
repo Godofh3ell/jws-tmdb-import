@@ -1,0 +1,100 @@
+.jws-tmdb-form-content {
+    background: #ffffff;
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+      position: relative;
+    max-width: 500px;
+    margin: 20px auto;
+}
+.jws-actions button {
+  background: #7B61FF !important;
+    border-color: #7B61FF !important;
+    padding: 5px 30px !important;
+    font-size: 16px !important;
+}
+
+.jws-tmdb-form-content p {
+    font-size: 16px;
+}
+
+.jws-tmdb-form-content h2 {
+        font-size: 22px;
+}
+
+.jws-tmdb-form-content input {
+   margin-right: 10px;
+    margin-top: -2px !important;
+    zoom: 1.2;
+}
+.jws-tmdb-form-content .successfully {
+      background: #33a133;
+    color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 3px;  
+}
+
+
+
+.loader {
+    position: absolute;
+    margin: 0 auto;
+    width: 30px;
+    height: 30px;
+    margin-left: -15px;
+    margin-top: -15px;
+    opacity: 0;
+    top: 50%;
+    left: 50%
+}
+
+.loader:before {
+    content: '';
+    display: block;
+    padding-top: 100%
+}
+
+.loader .circular {
+    animation: rotatekey 2s linear infinite;
+    height: 100%;
+    transform-origin: center center;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto
+}
+
+.loader .path {
+    stroke-dasharray: 1,200;
+    stroke-dashoffset: 0;
+    animation: dash 1.5s ease-in-out infinite;
+    stroke: #000;
+    stroke-linecap: round
+}
+
+.jws-tmdb-form-content.loading .loader {
+    opacity: 1;
+}
+.jws-tmdb-form-content.loading button {
+    pointer-events: none;
+}
+
+@keyframes dash {
+    0% {
+        stroke-dasharray: 1,200;
+        stroke-dashoffset: 0
+    }
+
+    50% {
+        stroke-dasharray: 89,200;
+        stroke-dashoffset: -35px
+    }
+
+    100% {
+        stroke-dasharray: 89,200;
+        stroke-dashoffset: -124px
+    }
+}
